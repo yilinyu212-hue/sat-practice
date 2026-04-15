@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Digital SAT R&W Practice</title>
+<script>
+// ↓↓↓ 在下面引号里填入你的 API Key，其他什么都不用改 ↓↓↓
+const API_KEY = "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";
+// ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+</script>
 <style>
   :root {
     --bg: #ffffff;
@@ -400,7 +405,7 @@ Return ONLY valid JSON, no markdown fences, no extra text:
 
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "x-api-key": API_KEY, "anthropic-version": "2023-06-01" },
     body: JSON.stringify({
       model: "claude-sonnet-4-20250514",
       max_tokens: 1000,
